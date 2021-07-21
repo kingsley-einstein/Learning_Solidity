@@ -15,4 +15,8 @@ contract HelloWorld {
   function setGreeting(string memory message_) public {
     message = message_;
   }
+
+  function setInsult() public pure returns (string memory) {
+    return "This is an insult!";
+  }
 }
