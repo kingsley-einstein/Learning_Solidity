@@ -4,11 +4,15 @@ pragma solidity >=0.4.22 <0.9.0;
 contract HelloWorld {
   address owner;
   string message = "Hello World!";
-  constructor() public {
+   constructor () public {
     owner = msg.sender;
   }
 
-  function greet() view public returns (string memory) {
+  function greet() public view returns (string memory) {
     return message;
+  }
+
+  function setGreeting(string memory message_) public {
+    message = message_;
   }
 }
